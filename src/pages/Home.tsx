@@ -61,7 +61,10 @@ const Home: React.FC = () => {
     <PagesParent>
       <MainContainer>
         <h1 className="text-center mt-5">Trending Articles</h1>
-        <button onClick={refreshHandler} className="btn btn-success btn-reload">
+        <button
+          onClick={refreshHandler}
+          className="btn btn-success btn-reload mt-5"
+        >
           <AiOutlineReload className="fs-3 me-2 reload" />
           Refresh
         </button>
