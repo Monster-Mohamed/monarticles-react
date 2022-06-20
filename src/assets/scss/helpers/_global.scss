@@ -1,0 +1,17 @@
+@use "var" as *;
+
+// body styles
+body {
+  overflow-x: hidden;
+}
+
+.btn-reload {
+  .reload {
+    transition: 0.4s;
+  }
+  &:hover {
+    .reload {
+      transform: rotate(360deg);
+    }
+  }
+}
