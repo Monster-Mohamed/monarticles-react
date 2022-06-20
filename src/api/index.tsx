@@ -5,8 +5,10 @@
  */
 
 class AppURL {
+  // your domain name
+  static Base = "https://monster-articles-app.herokuapp.com";
   // the api name
-  static BaseURL = `/api`;
+  static BaseURL = `${this.Base}/api`;
 
   /**
    * CompileURL() v1

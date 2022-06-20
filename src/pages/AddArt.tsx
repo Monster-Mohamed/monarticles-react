@@ -36,7 +36,7 @@ const AddArt: React.FC = () => {
       body,
     };
 
-    if (title.trim() !== "" || summary.trim() !== "" || body.trim() !== "") {
+    if (title.trim() !== "" && summary.trim() !== "" && body.trim() !== "") {
       axios
         .post(AppURL.AddArtURL, formData)
         .then((res) => {

@@ -14,6 +14,7 @@ const Home: React.FC = () => {
   const [isReady, setIsReady] = useState(false);
 
   const getAllArticles = () => {
+    setIsReady(false);
     axios
       .get(AppURL.AllArtsURL)
       .then((res) => {
@@ -28,8 +29,8 @@ const Home: React.FC = () => {
   }, []);
 
   const all =
-    allArts.length > 0 ? (
-      allArts.map((art) => (
+    isReady && allArts?.length > 0 ? (
+      allArts?.map((art) => (
         <Col key={art._id} className="mt-5" lg={4} md={6} xs={12}>
           <TrendingCard title={art.title} summary={art.summary} _id={art._id} />
         </Col>
